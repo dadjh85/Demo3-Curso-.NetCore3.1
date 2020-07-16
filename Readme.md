@@ -6,6 +6,6 @@
 
 
 
-Más información en: [Demo3-Curso-.NetCore.pptx](https://github.com/dadjh85/Demo2-Curso-.NetCore3.1/raw/master/doc/Demo2-%20Curso%20.NET%20Core.pptx)
+Más información en: [Demo3-Curso-.NetCore.pptx](https://github.com/dadjh85/Demo3-Curso-.NetCore3.1/raw/master/doc/Demo3-%20Curso%20.NET%20Core.pptx)
 
 
