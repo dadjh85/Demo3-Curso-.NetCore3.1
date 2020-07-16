@@ -1,11 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Demo3.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -15,6 +10,7 @@ namespace Demo3
 {
     public class Startup
     {
+
         /// <summary>
         /// Constructor of startup
         /// </summary>
@@ -36,14 +32,17 @@ namespace Demo3
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddLogging();
         }
 
         /// <summary>
         /// Exclusive pipeline of the environment Development
         /// </summary>
         /// <param name="services"></param>
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
+            loggerFactory.UseLogFiles();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
